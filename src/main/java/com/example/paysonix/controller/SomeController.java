@@ -20,7 +20,7 @@ public class SomeController {
 
     @PostMapping(consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
     public Response somePostMethod(@RequestBody(required = false) final Map<String, String> params,
-                                   @RequestParam(required = false) String operationId) {
+                                   @RequestParam String operationId) {
         return new Response(Status.SUCCESS, service.doSomething(params));
     }
 }

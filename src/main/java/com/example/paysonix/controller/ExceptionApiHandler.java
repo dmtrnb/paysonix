@@ -9,6 +9,7 @@ public class ExceptionApiHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleByDefault(Exception exception) {
+        exception.printStackTrace();
         return ResponseEntity
                 .internalServerError()
                 .body(exception.getMessage());
