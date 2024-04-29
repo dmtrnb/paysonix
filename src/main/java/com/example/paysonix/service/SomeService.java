@@ -21,7 +21,7 @@ public class SomeService {
     private final BytesArray2StringConverter converter;
 
     public List<Result> doSomething(Map<String, String> params) {
-        if (params == null) {
+        if (params == null || params.isEmpty()) {
             return List.of();
         }
 
